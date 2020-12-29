@@ -1,0 +1,17 @@
+//return type of the function will be int since we are returning the height fof the tree
+int getHeight(TreeNode<int>* root){
+  int height=0;
+  
+  //iterate over children over the root
+  for(int i=0;i<root->children.size();i++){
+    //using recursion to calculate the heights of other notes and see if any other node has more descendants 
+    int otherHeight = getHeight(root->children[i]);
+    
+    if(height<otherHeight){
+      height=otherHeight;
+    }
+  }//end for
+  
+  //the height of the tree will also include the root, and hence 1 is added
+  return height+1;
+}//end heightOfTree
