@@ -1,0 +1,17 @@
+int power(int x, int n) {
+    if(n==0)
+        return 1;
+    
+    else if(n==1)
+        return x;
+    
+    else
+        return x*power(x,n-1);
+    
+    /* Don't write main().
+     Don't read input, it is passed as function argument.
+     Return output and don't print it.
+     Taking input and printing output is handled automatically.
+  */
+
+}
